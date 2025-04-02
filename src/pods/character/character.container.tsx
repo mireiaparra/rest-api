@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import * as api from './api';
-import { createEmptyHotel, Hotel } from './hotel.vm';
-import { mapHotelFromApiToVm, mapHotelFromVmToApi } from './hotel.mappers';
+import { createEmptyCharacter, Character } from './character.vm';
+import { mapCharacterFromApiToVm, mapCharacterFromVmToApi } from './character.mappers';
 import { Lookup } from '#common/models';
-import { HotelComponent } from './hotel.component';
+import { HotelComponent } from './character.component';
 
-export const HotelContainer: React.FunctionComponent = (props) => {
-  const [hotel, setHotel] = React.useState<Hotel>(createEmptyHotel());
+export const CharacterContainer: React.FunctionComponent = (props) => {
+  const [character, setCharacter] = React.useState<Character>(createEmptyCharacter());
   const [cities, setCities] = React.useState<Lookup[]>([]);
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export const HotelContainer: React.FunctionComponent = (props) => {
 
   const handleLoadHotel = async () => {
     const apiHotel = await api.getHotel(id);
-    setHotel(mapHotelFromApiToVm(apiHotel));
+    setCharacter(mapCharacterFromApiToVm(apiHotel));
   };
 
   React.useEffect(() => {
@@ -29,8 +29,8 @@ export const HotelContainer: React.FunctionComponent = (props) => {
     handleLoadCityCollection();
   }, []);
 
-  const handleSave = async (hotel: Hotel) => {
-    const apiHotel = mapHotelFromVmToApi(hotel);
+  const handleSave = async (hotel: Character) => {
+    const apiHotel = mapCharacterFromVmToApi(hotel);
     const success = await api.saveHotel(apiHotel);
     if (success) {
       navigate(-1);
@@ -39,5 +39,5 @@ export const HotelContainer: React.FunctionComponent = (props) => {
     }
   };
 
-  return <HotelComponent hotel={hotel} cities={cities} onSave={handleSave} />;
+  return <HotelComponent hotel={character} cities={cities} onSave={handleSave} />;
 };

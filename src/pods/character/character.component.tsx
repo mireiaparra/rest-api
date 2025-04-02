@@ -7,9 +7,9 @@ import {
   RatingComponent,
 } from '#common/components';
 import { Lookup } from '#common/models';
-import { formValidation } from './hotel.validations';
-import { Hotel } from './hotel.vm';
-import * as classes from './hotel.styles';
+import { formValidation } from './character.validations';
+import { Hotel } from './character.vm';
+import * as classes from './character.styles';
 
 interface Props {
   hotel: Hotel;
