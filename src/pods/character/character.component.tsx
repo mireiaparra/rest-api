@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
 import {
   TextFieldComponent,
@@ -8,23 +8,38 @@ import {
 import { Lookup } from '#common/models';
 import { formValidation } from './character.validations';
 import * as classes from './character.styles';
-import { Character } from './api';
-import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Character, updateCharacter } from './api';
+import { Button, Card, CardContent, CardMedia, TextField, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 interface Props {
   character: Character;
-  cities: Lookup[];
-  onSave: (character: Character) => void;
 }
 
 export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
   const { character } = props;
+  const [bestSentences, setBestSentences] = useState(character.bestSentences || []);
+  const [newSentence, setNewSentence] = useState('');
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (character.bestSentences) {
+      setBestSentences(character.bestSentences);
+    }
+  }, [character]);
   const handleBack = () => {
     navigate(-1); 
   };
+
+  const handleAddSentence = () => {
+    if (newSentence.trim()) {
+      const updatedSentences = [...bestSentences, newSentence];
+      setBestSentences(updatedSentences);
+      setNewSentence('');
+      updateCharacter(character.id, { ...character, bestSentences: updatedSentences });
+    }
+  };
+  
   return (
     <Card className={classes.root}>
       <CardMedia
@@ -61,6 +76,25 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
         <Typography variant="subtitle1" gutterBottom>
           <strong>Created:</strong> {new Date(character.created).toLocaleDateString()}
         </Typography>
+        <Typography variant="subtitle1" gutterBottom>
+          <strong>Best Sentences:</strong>
+        </Typography>
+        <ul>
+          {bestSentences.map((sentence, index) => (
+            console.log(sentence),
+            <li key={index}>{sentence}</li>
+          ))}
+        </ul>
+        <TextField
+          label="Add a new sentence"
+          value={newSentence}
+          onChange={(e) => setNewSentence(e.target.value)}
+          fullWidth
+          margin="normal"
+        />
+        <Button variant="contained" color="primary" onClick={handleAddSentence}>
+          Add Sentence
+        </Button>
       </CardContent>
       <Button
         variant="contained"
@@ -68,7 +102,7 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
         onClick={handleBack}
         style={{ margin: '20px' }}
       >
-        Volver
+        Back
       </Button>
     </Card>
   );

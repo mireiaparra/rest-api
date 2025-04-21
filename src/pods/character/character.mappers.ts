@@ -15,6 +15,7 @@ export const mapCharacterFromApiToVm = (
   location: character.location,
   image: character.image,
   episode: character.episode,
+  bestSentences: character.bestSentences || [],
 });
 
 export const mapCharacterFromVmToApi = (character: viewModel.Character): apiModel.Character =>

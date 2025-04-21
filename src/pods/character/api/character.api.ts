@@ -1,15 +1,18 @@
-import { Character } from './character.api-model';
-import { Lookup } from '#common/models';
-import { mockCities, mockCharacterCollection } from './character.mock-data';
+import axios from 'axios';
 
-export const getCharacter = async (id: string): Promise<Character> => {
-  return mockCharacterCollection.find((h) => h.id === id);
+const baseUrl = 'http://localhost:3001/characters';
+
+export const getCharacterCollection = async () => {
+  const response = await axios.get(baseUrl);
+  return response.data;
 };
 
-export const getCities = async (): Promise<Lookup[]> => {
-  return mockCities;
+export const getCharacterById = async (id: string) => {
+  const response = await axios.get(`${baseUrl}/${id}`);
+  return response.data;
 };
 
-export const saveCharacter = async (character: Character): Promise<boolean> => {
-  return true;
+export const updateCharacter = async (id: string, character: any) => {
+  const response = await axios.put(`${baseUrl}/${id}`, character);
+  return response.data;
 };

@@ -11,6 +11,7 @@ export interface Character {
   episode: string[];
   url: string;
   created: string;
+  bestSentences: string[];
 }
 
 export const createEmptyCharacter = (): Character => ({
@@ -26,4 +27,5 @@ export const createEmptyCharacter = (): Character => ({
   episode: [],
   url: '',
   created: '',
+  bestSentences: [],
 });
