@@ -13,22 +13,20 @@ export type MapFromApiToVm<AM, VM> = (AM: AM) => VM;
 
 export const useGeneralApiCollection = <AM, VM>(config: {
   mapFromApiToVm: MapFromApiToVm<AM, VM>;
-  endPoint: keyof typeof ENDPOINTS_DEF;
+  endPoint: string;
 }) => {
   const { mapFromApiToVm, endPoint } = config;
   const [collection, setCollection] = React.useState<VM[]>([]);
   const [errorMessage, setErrorMessage] = React.useState<string>('');
   const navigate = useNavigate();
 
-
   const loadCollection = (searchParams: string = '') => {
     getCollection<AM>(searchParams, endPoint)
       .then((data) => {
-        const results = data.results;
-        setCollection(mapToCollection(results, mapFromApiToVm));
+        setCollection(mapToCollection(data, mapFromApiToVm));
       })
       .catch((error) => {
-        setErrorMessage(error.message);
+        setErrorMessage(error);
         console.error('Error fetching data:', error);
         navigate('/error', { state: { errorMessage: error.message } });
       });

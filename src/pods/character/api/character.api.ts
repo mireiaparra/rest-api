@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Character } from './character.api-model';
 
 const baseUrl = 'http://localhost:3001/characters';
 
@@ -12,7 +13,7 @@ export const getCharacterById = async (id: string) => {
   return response.data;
 };
 
-export const updateCharacter = async (id: string, character: any) => {
+export const updateCharacter = async (id: string, character: Character) => {
   const response = await axios.put(`${baseUrl}/${id}`, character);
   return response.data;
 };

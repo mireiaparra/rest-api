@@ -8,9 +8,11 @@ import {
 import { Lookup } from '#common/models';
 import { formValidation } from './character.validations';
 import * as classes from './character.styles';
-import { Character, updateCharacter } from './api';
+import { updateCharacter } from './api';
 import { Button, Card, CardContent, CardMedia, TextField, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { Character } from './character.vm';
+import { mapCharacterFromVmToApi } from './character.mappers';
 
 interface Props {
   character: Character;
@@ -36,7 +38,7 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
       const updatedSentences = [...bestSentences, newSentence];
       setBestSentences(updatedSentences);
       setNewSentence('');
-      updateCharacter(character.id, { ...character, bestSentences: updatedSentences });
+      updateCharacter(character.id, mapCharacterFromVmToApi({ ...character, bestSentences: updatedSentences }));
     }
   };
   
@@ -81,7 +83,6 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
         </Typography>
         <ul>
           {bestSentences.map((sentence, index) => (
-            console.log(sentence),
             <li key={index}>{sentence}</li>
           ))}
         </ul>

@@ -1,6 +1,8 @@
 import Axios, { AxiosError } from 'axios';
 import { ApiResponse, baseUrl } from './api-collection-hook';
-import { ENDPOINTS_DEF } from '../env';
+import { ENDPOINTS_DEF } from '#core/env';
+import { Character } from '#pods/character/api';
+
 
 export const isNotFoundError = (error: AxiosError): boolean => {
   const errorCode = error.response.status;
@@ -9,9 +11,9 @@ export const isNotFoundError = (error: AxiosError): boolean => {
 
 export const getCollection = async <AM>(
   searchParams: string = '',
-  endPoint: keyof typeof ENDPOINTS_DEF,
+  endPoint:string,
   pageNumber: number = 1,
-): Promise<ApiResponse<AM>> => {
+): Promise<Character[]> => {
   try {
     const { data } = await Axios.get(
       `${baseUrl}${ENDPOINTS_DEF[endPoint]}/?page=${pageNumber}${searchParams ? `&${searchParams}` : ''}`

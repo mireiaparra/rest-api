@@ -3,8 +3,8 @@ interface Constants {
 }
 
 export const CONSTANTS: Constants = {
-  API_BASE_URL: 'https://rickandmortyapi.com/api/',
+  API_BASE_URL: 'http://localhost:3001/',
 };
 export const ENDPOINTS_DEF = {
-  CHARACTER: 'character',
+  characters: 'characters',
 };
