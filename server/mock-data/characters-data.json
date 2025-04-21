@@ -1,0 +1,40 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "New York",
+      "country": "USA"
+    },
+    {
+      "id": 2,
+      "name": "Tokyo",
+      "country": "Japan"
+    }
+  ],
+  "characters": [
+    {
+      "id": "1",
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Male",
+      "origin": "Earth (C-137)",
+      "location": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "episode": ["https://rickandmortyapi.com/api/episode/1"]
+    },
+    {
+      "id": "2",
+      "name": "Morty Smith",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Male",
+      "origin": "Earth (C-137)",
+      "location": "Earth (Replacement Dimension)",
+      "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+      "episode": ["https://rickandmortyapi.com/api/episode/1"]
+    }
+  ]
+}
