@@ -4,7 +4,7 @@ import * as api from './api';
 import { createEmptyCharacter, Character } from './character.vm';
 import { mapCharacterFromApiToVm, mapCharacterFromVmToApi } from './character.mappers';
 import { Lookup } from '#common/models';
-import { HotelComponent } from './character.component';
+import { CharacterComponent } from './character.component';
 
 export const CharacterContainer: React.FunctionComponent = (props) => {
   const [character, setCharacter] = React.useState<Character>(createEmptyCharacter());
@@ -17,27 +17,27 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
     setCities(apiCities);
   };
 
-  const handleLoadHotel = async () => {
-    const apiHotel = await api.getHotel(id);
-    setCharacter(mapCharacterFromApiToVm(apiHotel));
+  const handleLoadCharacter = async () => {
+    const apiCharacter = await api.getCharacter(id);
+    setCharacter(mapCharacterFromApiToVm(apiCharacter));
   };
 
   React.useEffect(() => {
     if (id) {
-      handleLoadHotel();
+      handleLoadCharacter();
     }
     handleLoadCityCollection();
   }, []);
 
-  const handleSave = async (hotel: Character) => {
-    const apiHotel = mapCharacterFromVmToApi(hotel);
-    const success = await api.saveHotel(apiHotel);
+  const handleSave = async (character: Character) => {
+    const apiCharacter = mapCharacterFromVmToApi(character);
+    const success = await api.saveCharacter(apiCharacter);
     if (success) {
       navigate(-1);
     } else {
-      alert('Error on save hotel');
+      alert('Error on save character');
     }
   };
 
-  return <HotelComponent hotel={character} cities={cities} onSave={handleSave} />;
+  return <CharacterComponent character={character} cities={cities} onSave={handleSave} />;
 };

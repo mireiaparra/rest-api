@@ -9,6 +9,8 @@ export interface Character {
   location: string;
   image: string;
   episode: string[];
+  url: string;
+  created: string;
 }
 
 export const createEmptyCharacter = (): Character => ({
@@ -22,4 +24,6 @@ export const createEmptyCharacter = (): Character => ({
   location: '',
   image: '',
   episode: [],
+  url: '',
+  created: '',
 });

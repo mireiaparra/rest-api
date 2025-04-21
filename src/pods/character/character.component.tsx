@@ -8,22 +8,22 @@ import {
 } from '#common/components';
 import { Lookup } from '#common/models';
 import { formValidation } from './character.validations';
-import { Hotel } from './character.vm';
 import * as classes from './character.styles';
+import { Character } from './api';
 
 interface Props {
-  hotel: Hotel;
+  character: Character;
   cities: Lookup[];
-  onSave: (hotel: Hotel) => void;
+  onSave: (character: Character) => void;
 }
 
-export const HotelComponent: React.FunctionComponent<Props> = (props) => {
-  const { hotel, cities, onSave } = props;
+export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
+  const { character, cities, onSave } = props;
 
   return (
     <Formik
       onSubmit={onSave}
-      initialValues={hotel}
+      initialValues={character}
       enableReinitialize={true}
       validate={formValidation.validateForm}
     >

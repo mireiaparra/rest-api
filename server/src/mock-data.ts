@@ -1,7 +1,7 @@
-export const hotels = [
+export const characters = [
   {
     id: '1',
-    type: 'hotel',
+    type: 'character',
     name: 'Motif Seattle',
     created: 1464777092568,
     modified: 1464777618676,
@@ -12,11 +12,11 @@ export const hotels = [
     confidenceRating: 52,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/125727/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/125727/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 289,
-    hotelId: 1257278,
-    hotelInDestination: true,
-    hotelRating: 4,
+    characterId: 1257278,
+    characterInDestination: true,
+    characterRating: 4,
     location: {
       latitude: 47.60985,
       longitude: -122.33475,
@@ -24,7 +24,7 @@ export const hotels = [
     locationDescription: 'Near Pike Place Market',
     lowRate: 259,
     metadata: {
-      path: '/hotels/1',
+      path: '/characters/1',
     },
     postalCode: 98101,
     propertyCategory: 1,
@@ -32,7 +32,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      'With a stay at Motif Seattle, you will be centrally located in Seattle, steps from 5th Avenue Theater and minutes from Pike Place Market. This 4-star hotel is within',
+      'With a stay at Motif Seattle, you will be centrally located in Seattle, steps from 5th Avenue Theater and minutes from Pike Place Market. This 4-star character is within',
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/50947_264_t.jpg',
     tripAdvisorRating: 3.5,
@@ -41,7 +41,7 @@ export const hotels = [
   },
   {
     id: '2',
-    type: 'hotel',
+    type: 'character',
     name: 'The Westin Seattle',
     created: 1464777092593,
     modified: 1464871217352,
@@ -52,11 +52,11 @@ export const hotels = [
     confidenceRating: 5,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/164122/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/164122/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 259,
-    hotelId: 164122,
-    hotelInDestination: true,
-    hotelRating: 4,
+    characterId: 164122,
+    characterInDestination: true,
+    characterRating: 4,
     location: {
       latitude: 47.61309,
       longitude: -122.33788,
@@ -64,7 +64,7 @@ export const hotels = [
     locationDescription: 'Near Pike Place Market',
     lowRate: 209,
     metadata: {
-      path: '/hotels/2',
+      path: '/characters/2',
     },
     postalCode: 98101,
     propertyCategory: 1,
@@ -72,7 +72,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      "With a stay at The Westin Seattle, you'll be centrally laocated in Seattle, steps from Westlake Center and minutes from Pacific Place. This 4-star hotel is close to",
+      "With a stay at The Westin Seattle, you'll be centrally laocated in Seattle, steps from Westlake Center and minutes from Pacific Place. This 4-star character is close to",
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/16673_260_t.jpg',
     tripAdvisorRating: 4,
@@ -81,8 +81,8 @@ export const hotels = [
   },
   {
     id: '3',
-    type: 'hotel',
-    name: 'Sheraton Seattle Hotel',
+    type: 'character',
+    name: 'Sheraton Seattle Character',
     created: 1464777092619,
     modified: 1464777092619,
     address1: '1400 6th Ave',
@@ -92,11 +92,11 @@ export const hotels = [
     confidenceRating: 30,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/164116/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/164116/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 320,
-    hotelId: 164116,
-    hotelInDestination: true,
-    hotelRating: 4,
+    characterId: 164116,
+    characterInDestination: true,
+    characterRating: 4,
     location: {
       latitude: 47.61017,
       longitude: -122.33357,
@@ -104,7 +104,7 @@ export const hotels = [
     locationDescription: 'Near Pike Place Market',
     lowRate: 205,
     metadata: {
-      path: '/hotels/3',
+      path: '/characters/3',
     },
     postalCode: 98101,
     propertyCategory: 1,
@@ -112,7 +112,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      "With a stay at Sheraton Seattle Hotel, you'll be centrally located in Seattle, steps from 5th Avenue Theater and Washington State Convention Center. This 4-star",
+      "With a stay at Sheraton Seattle Character, you'll be centrally located in Seattle, steps from 5th Avenue Theater and Washington State Convention Center. This 4-star",
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/25290_88_t.jpg',
     tripAdvisorRating: 4,
@@ -121,8 +121,8 @@ export const hotels = [
   },
   {
     id: '4',
-    type: 'hotel',
-    name: 'The Edgewater - A Noble House Hotel',
+    type: 'character',
+    name: 'The Edgewater - A Noble House Character',
     created: 1464777092643,
     modified: 1464777092643,
     address1: 'Pier 67, 2411 Alaskan Way',
@@ -132,11 +132,11 @@ export const hotels = [
     confidenceRating: 95,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/127092/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/127092/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 269,
-    hotelId: 127092,
-    hotelInDestination: true,
-    hotelRating: 4,
+    characterId: 127092,
+    characterInDestination: true,
+    characterRating: 4,
     location: {
       latitude: 47.61252,
       longitude: -122.35013,
@@ -144,7 +144,7 @@ export const hotels = [
     locationDescription: 'Near Pike Place Market',
     lowRate: 179,
     metadata: {
-      path: '/hotels/4',
+      path: '/characters/4',
     },
     postalCode: 98121,
     propertyCategory: 1,
@@ -152,7 +152,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      "With a stay at The Edgewater - A Noble House Hotel, you'll be centrally located in Seattle, steps from Bell Street Cruise Terminal at Pier 66 and minutes from",
+      "With a stay at The Edgewater - A Noble House Character, you'll be centrally located in Seattle, steps from Bell Street Cruise Terminal at Pier 66 and minutes from",
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/11133_169_t.jpg',
     tripAdvisorRating: 4,
@@ -161,8 +161,8 @@ export const hotels = [
   },
   {
     id: '5',
-    type: 'hotel',
-    name: 'Hotel Max, a Provenance Hotel',
+    type: 'character',
+    name: 'Character Max, a Provenance Character',
     created: 1464777092667,
     modified: 1464777092667,
     address1: '620 Stewart St',
@@ -172,11 +172,11 @@ export const hotels = [
     confidenceRating: 52,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/113426/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/113426/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 188.202,
-    hotelId: 113426,
-    hotelInDestination: true,
-    hotelRating: 3.5,
+    characterId: 113426,
+    characterInDestination: true,
+    characterRating: 3.5,
     location: {
       latitude: 47.61381,
       longitude: -122.33686,
@@ -184,7 +184,7 @@ export const hotels = [
     locationDescription: 'Near Pike Place Market',
     lowRate: 187.202,
     metadata: {
-      path: '/hotels/5',
+      path: '/characters/5',
     },
     postalCode: 98101,
     propertyCategory: 1,
@@ -192,7 +192,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      'With a stay at Hotel Max, a Provenance Hotel in Seattle (Belltown), you&apos;ll be minutes from Westlake Center and Washington State Convention Center. This hotel is',
+      'With a stay at Character Max, a Provenance Character in Seattle (Belltown), you&apos;ll be minutes from Westlake Center and Washington State Convention Center. This character is',
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/28647_30_t.jpg',
     tripAdvisorRating: 4,
@@ -201,8 +201,8 @@ export const hotels = [
   },
   {
     id: '6',
-    type: 'hotel',
-    name: 'Hotel Monaco Seattle, a Kimpton Hotel',
+    type: 'character',
+    name: 'Character Monaco Seattle, a Kimpton Character',
     created: 1464777092694,
     modified: 1464777092694,
     address1: '1101 4th Ave',
@@ -212,11 +212,11 @@ export const hotels = [
     confidenceRating: 52,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/132138/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/132138/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 489,
-    hotelId: 132138,
-    hotelInDestination: true,
-    hotelRating: 4,
+    characterId: 132138,
+    characterInDestination: true,
+    characterRating: 4,
     location: {
       latitude: 47.60682,
       longitude: -122.33358,
@@ -224,7 +224,7 @@ export const hotels = [
     locationDescription: 'Near Pike Place Market',
     lowRate: 189,
     metadata: {
-      path: '/hotels/6',
+      path: '/characters/6',
     },
     postalCode: 98101,
     propertyCategory: 1,
@@ -232,7 +232,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      'With a stay at Hotel Monaco Seattle, a Kimpton Hotel, you&apos;ll be centrally located in Seattle, steps from Seattle Public Library and Safeco Headquarters. This 4-star',
+      'With a stay at Character Monaco Seattle, a Kimpton Character, you&apos;ll be centrally located in Seattle, steps from Seattle Public Library and Safeco Headquarters. This 4-star',
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/62800_122_t.jpg',
     tripAdvisorRating: 4.5,
@@ -241,8 +241,8 @@ export const hotels = [
   },
   {
     id: '7',
-    type: 'hotel',
-    name: 'Hotel Deca - A Noble House Hotel',
+    type: 'character',
+    name: 'Character Deca - A Noble House Character',
     created: 1464777092721,
     modified: 1464777092721,
     address1: '4507 Brooklyn Avenue NE',
@@ -252,11 +252,11 @@ export const hotels = [
     confidenceRating: 95,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/191964/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/191964/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 159,
-    hotelId: 191964,
-    hotelInDestination: true,
-    hotelRating: 3.5,
+    characterId: 191964,
+    characterInDestination: true,
+    characterRating: 3.5,
     location: {
       latitude: 47.66143,
       longitude: -122.31429,
@@ -264,7 +264,7 @@ export const hotels = [
     locationDescription: 'In Seattle (University District)',
     lowRate: 119,
     metadata: {
-      path: '/hotels/7',
+      path: '/characters/7',
     },
     postalCode: 98105,
     propertyCategory: 1,
@@ -272,7 +272,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      'With a stay at Hotel Deca - A Noble House Hotel in Seattle (University District), you&apos;ll be minutes from Burke Museum of Natural History and Culture and close to',
+      'With a stay at Character Deca - A Noble House Character in Seattle (University District), you&apos;ll be minutes from Burke Museum of Natural History and Culture and close to',
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/19023_103_t.jpg',
     tripAdvisorRating: 4,
@@ -281,7 +281,7 @@ export const hotels = [
   },
   {
     id: '8',
-    type: 'hotel',
+    type: 'character',
     name: 'W Seattle',
     created: 1464777092747,
     modified: 1464777092747,
@@ -292,11 +292,11 @@ export const hotels = [
     confidenceRating: 5,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/213497/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/213497/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 210,
-    hotelId: 213497,
-    hotelInDestination: true,
-    hotelRating: 4,
+    characterId: 213497,
+    characterInDestination: true,
+    characterRating: 4,
     location: {
       latitude: 47.60688,
       longitude: -122.33361,
@@ -304,7 +304,7 @@ export const hotels = [
     locationDescription: 'Near Pike Place Market',
     lowRate: 175,
     metadata: {
-      path: '/hotels/8',
+      path: '/characters/8',
     },
     postalCode: 98101,
     propertyCategory: 1,
@@ -312,7 +312,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      'With a stay at W Seattle, you&apos;ll be centrally located in Seattle, steps from Seattle Public Library and Safeco Headquarters. This 4-star hotel is close to Pike Place',
+      'With a stay at W Seattle, you&apos;ll be centrally located in Seattle, steps from Seattle Public Library and Safeco Headquarters. This 4-star character is close to Pike Place',
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/284304_50_t.jpg',
     tripAdvisorRating: 4,
@@ -321,8 +321,8 @@ export const hotels = [
   },
   {
     id: '9',
-    type: 'hotel',
-    name: 'Hotel Andra',
+    type: 'character',
+    name: 'Character Andra',
     created: 1464777092776,
     modified: 1464777092776,
     address1: '2000 4th Ave',
@@ -332,11 +332,11 @@ export const hotels = [
     confidenceRating: 45,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/119562/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/119562/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 239.5368,
-    hotelId: 119562,
-    hotelInDestination: true,
-    hotelRating: 4,
+    characterId: 119562,
+    characterInDestination: true,
+    characterRating: 4,
     location: {
       latitude: 47.61318,
       longitude: -122.34009,
@@ -344,7 +344,7 @@ export const hotels = [
     locationDescription: 'Near Pike Place Market',
     lowRate: 189.4252,
     metadata: {
-      path: '/hotels/9',
+      path: '/characters/9',
     },
     postalCode: 98121,
     propertyCategory: 1,
@@ -352,7 +352,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      'With a stay at Hotel Andra, you&apos;ll be centrally located in Seattle, minutes from Westlake Center and Pike Place Market. This 4-star hotel is within close proximity',
+      'With a stay at Character Andra, you&apos;ll be centrally located in Seattle, minutes from Westlake Center and Pike Place Market. This 4-star character is within close proximity',
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/16950_158_t.jpg',
     tripAdvisorRating: 4.5,
@@ -361,8 +361,8 @@ export const hotels = [
   },
   {
     id: '10',
-    type: 'hotel',
-    name: 'The Maxwell Hotel - Pineapple Hospitality',
+    type: 'character',
+    name: 'The Maxwell Character - Pineapple Hospitality',
     created: 1464777092809,
     modified: 1464777092809,
     address1: '300 Roy St',
@@ -372,11 +372,11 @@ export const hotels = [
     confidenceRating: 95,
     countryCode: 'US',
     deepLink:
-      'http://www.travelnow.com/templates/55505/hotels/342070/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
+      'http://www.travelnow.com/templates/55505/characters/342070/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null',
     highRate: 289,
-    hotelId: 342070,
-    hotelInDestination: true,
-    hotelRating: 3,
+    characterId: 342070,
+    characterInDestination: true,
+    characterRating: 3,
     location: {
       latitude: 47.62561,
       longitude: -122.35129,
@@ -384,7 +384,7 @@ export const hotels = [
     locationDescription: 'Near Pacific Northwest Ballet',
     lowRate: 229,
     metadata: {
-      path: '/hotels/10',
+      path: '/characters/10',
     },
     postalCode: 98109,
     propertyCategory: 1,
@@ -392,7 +392,7 @@ export const hotels = [
     proximityUnit: 'MI',
     rateCurrencyCode: 'USD',
     shortDescription:
-      'With a stay at The Maxwell Hotel - Pineapple Hospitality, you&apos;ll be centrally located in Seattle, steps from Pacific Northwest Ballet and Teatro ZinZanni. This',
+      'With a stay at The Maxwell Character - Pineapple Hospitality, you&apos;ll be centrally located in Seattle, steps from Pacific Northwest Ballet and Teatro ZinZanni. This',
     stateProvinceCode: 'WA',
     thumbNailUrl: '/thumbnails/3445681_43_t.jpg',
     tripAdvisorRating: 4.5,

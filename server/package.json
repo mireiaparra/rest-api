@@ -1,7 +1,7 @@
 {
-  "name": "hotel-api",
+  "name": "character-api",
   "version": "1.0.0",
-  "description": "Hotel API",
+  "description": "Character API",
   "type": "module",
   "scripts": {
     "mock-server": "tsx watch src/index.ts"
