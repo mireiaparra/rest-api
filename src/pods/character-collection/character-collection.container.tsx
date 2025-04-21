@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { linkRoutes } from '#core/router';
 import { deleteCharacter } from './api';
 import { useCharacterCollection } from './character-collection.hook';
@@ -9,29 +9,22 @@ export const CharacterCollectionContainer = () => {
   const { characterCollection, loadCharacterCollection } = useCharacterCollection();
   const navigate = useNavigate();
 
+  const path = useLocation();
+
   React.useEffect(() => {
     loadCharacterCollection();
-  }, []);
+  }, [path]);
 
-  const handleCreateCharacter = () => {
-    navigate(linkRoutes.createCharacter);
+
+  const handleDetail = (id: string) => {
+    navigate(linkRoutes.detailCharacter(id.toString()));
   };
 
-  const handleEdit = (id: string) => {
-    navigate(linkRoutes.editCharacter(id));
-  };
-
-  const handleDelete = async (id: string) => {
-    await deleteCharacter(id);
-    loadCharacterCollection();
-  };
 
   return (
     <CharacterCollectionComponent
       characterCollection={characterCollection}
-      onCreateCharacter={handleCreateCharacter}
-      onEdit={handleEdit}
-      onDelete={handleDelete}
+      onDetail={handleDetail}
     />
   );
 };

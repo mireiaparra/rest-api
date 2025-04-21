@@ -1,19 +1,26 @@
 import * as React from 'react';
 import { CharacterEntityVm } from './character-collection.vm';
-import { getCharacterCollection } from './api';
+import { useGeneralApiCollection } from '#core/api/api-collection-hook';
 import { mapFromApiToVm } from './character-collection.mapper';
-import { mapToCollection } from '#common/mappers';
+
 
 export const useCharacterCollection = () => {
-  const [characterCollection, setCharacterCollection] = React.useState<CharacterEntityVm[]>(
-    []
-  );
+  const {
+    collection,
+    loadCollection,
+  } = useGeneralApiCollection({
+    mapFromApiToVm: mapFromApiToVm,
+    endPoint: 'CHARACTER',
+  });
 
-  const loadCharacterCollection = () => {
-    getCharacterCollection().then((result) =>
-      setCharacterCollection(mapToCollection(result, mapFromApiToVm))
-    );
+  const loadCharacterCollection = (
+    searchParams: string = ''
+  ) => {
+    loadCollection(searchParams)
   };
 
-  return { characterCollection, loadCharacterCollection };
+  return {
+    characterCollection:collection,
+    loadCharacterCollection,
+  };
 };
